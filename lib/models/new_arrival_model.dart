@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class NewArrivalModel {
   String productName;
   String productImage;
@@ -7,9 +5,6 @@ class NewArrivalModel {
     this.productName = '',
     this.productImage = '',
   });
-
-  factory NewArrivalModel.fromJson(String source) =>
-      NewArrivalModel.fromMap(json.decode(source));
 
   factory NewArrivalModel.fromMap(Map<String, dynamic> map) {
     return NewArrivalModel(

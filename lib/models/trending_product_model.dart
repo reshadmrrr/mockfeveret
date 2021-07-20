@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class TrendingProductModel {
   String productName;
   String shortDetails;
@@ -9,8 +7,6 @@ class TrendingProductModel {
     this.shortDetails = '',
     this.productImage = '',
   });
-  factory TrendingProductModel.fromJson(String source) =>
-      TrendingProductModel.fromMap(json.decode(source));
 
   factory TrendingProductModel.fromMap(Map<String, dynamic> map) {
     return TrendingProductModel(

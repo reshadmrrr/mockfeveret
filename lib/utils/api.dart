@@ -1,14 +1,10 @@
-void main(List<String> args) {
-  print(Api.getNewArrivals);
-}
-
-String baseURL =
-    "https://bd.ezassist.me/ws/mpFeed?instanceName=bd.ezassist.me&opt=";
-
 class Api {
-  static String get getNewArrivals => "${baseURL}newArrivals";
-  static String get getNewShops => "${baseURL}newShops";
-  static String get getProduct => "${baseURL}stories";
-  static String get getTrendingProducts => "${baseURL}trendingProducts";
-  static String get getTrendingSellers => "${baseURL}trending_seller";
+  static const String _baseURL =
+      "https://bd.ezassist.me/ws/mpFeed?instanceName=bd.ezassist.me&opt=";
+
+  static String get newArrivals => "${_baseURL}newArrivals";
+  static String get newShops => "${_baseURL}newShops";
+  static String get products => "${_baseURL}stories";
+  static String get trendingProducts => "${_baseURL}trendingProducts";
+  static String get trendingSellers => "${_baseURL}trending_seller";
 }
