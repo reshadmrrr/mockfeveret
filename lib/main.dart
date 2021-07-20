@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/home_screen/home_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -10,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mock Feveret',
       theme: ThemeData(),
-      home: null,
+      home: HomeScreen(),
     );
   }
 }

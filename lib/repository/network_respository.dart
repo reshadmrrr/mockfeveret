@@ -35,7 +35,7 @@ class NetworkRepository {
 
   Future getProducts() async {
     try {
-      Response response = await dio.get(Api.newShops);
+      Response response = await dio.get(Api.products);
       List<ProductModel> lists = (response.data[0] as List)
           .map((e) => ProductModel.fromMap(e))
           .toList();
@@ -47,7 +47,7 @@ class NetworkRepository {
 
   Future getTrendingProducts() async {
     try {
-      Response response = await dio.get(Api.newShops);
+      Response response = await dio.get(Api.trendingProducts);
       List<TrendingProductModel> lists = (response.data[0] as List)
           .map((e) => TrendingProductModel.fromMap(e))
           .toList();
@@ -59,7 +59,7 @@ class NetworkRepository {
 
   Future getTrendingSellers() async {
     try {
-      Response response = await dio.get(Api.newShops);
+      Response response = await dio.get(Api.trendingSellers);
       List<TrendingSellerModel> lists = (response.data[0] as List)
           .map((e) => TrendingSellerModel.fromMap(e))
           .toList();

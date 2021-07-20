@@ -1,4 +1,4 @@
-import 'package:mockfeveret/models/new_arrival_model.dart';
+import 'package:mockfeveret/models/new_shop_model.dart';
 import 'package:mockfeveret/repository/network_respository.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -7,17 +7,17 @@ final NewShopBloc newShopBloc = NewShopBloc();
 class NewShopBloc {
   final NetworkRepository _repository = NetworkRepository();
 
-  final BehaviorSubject<List<NewArrivalModel>> _subject =
-      BehaviorSubject<List<NewArrivalModel>>();
+  final BehaviorSubject<List<NewShopModel>> _subject =
+      BehaviorSubject<List<NewShopModel>>();
 
-  BehaviorSubject<List<NewArrivalModel>> get subject => _subject;
+  BehaviorSubject<List<NewShopModel>> get subject => _subject;
 
   dispose() {
     _subject.close();
   }
 
   getNewShops() async {
-    List<NewArrivalModel> output = await _repository.getNewShops();
+    List<NewShopModel> output = await _repository.getNewShops();
     _subject.sink.add(output);
   }
 }
