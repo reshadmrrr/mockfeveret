@@ -30,9 +30,12 @@ class _NewArrivalListViewState extends State<NewArrivalListView> {
                     width: 80.0,
                     child: Column(
                       children: [
-                        CachedNetworkImage(
-                          imageUrl: arrivals[index].productImage,
+                        Container(
                           height: 100.0,
+                          child: CachedNetworkImage(
+                            imageUrl: arrivals[index].productImage,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                         Text(
                           arrivals[index].productName,
